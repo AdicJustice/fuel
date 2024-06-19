@@ -1,7 +1,9 @@
 // Define function to play click sound
+const clickSound = new Audio('click.mp3'); // Preîncărcăm sunetul
+
 function playClickSound() {
-    const audio = new Audio('click.mp3'); // Creează un nou obiect Audio cu sunetul dorit
-    audio.play(); // Redă sunetul
+    clickSound.currentTime = 0; // Resetează timpul de redare pentru a permite redarea repetată rapidă
+    clickSound.play(); // Redă sunetul
 }
 
 // Define function for GPL calculation
