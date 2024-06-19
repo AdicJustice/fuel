@@ -15,7 +15,7 @@ function calculateGPL() {
         return;
     }
     
-    const consumptionPer100Km = 10;
+    const consumptionPer100Km = 8.7;
     const cost = (price * distance * consumptionPer100Km) / 100;
     document.getElementById('gpl-result').innerText = `Călătoria va costa ${cost.toFixed(2)} lei.`;
 }
@@ -63,6 +63,25 @@ function calculateConsumption() {
     
     const consumptionPer100Km = (liters / distance) * 100;
     document.getElementById('consumption-result').innerText = `Consumul este de ${consumptionPer100Km.toFixed(2)} l/100 km.`;
+}
+
+// Define function for Reservoir GPL calculation
+function calculateReservoirGPL() {
+    playClickSound(); // Redă sunetul la apelul funcției
+    const boardKm = parseFloat(document.getElementById('board-km').value);
+    const gplPrice = parseFloat(document.getElementById('gpl-price-reservoir').value);
+    
+    if (isNaN(boardKm) || isNaN(gplPrice)) {
+        document.getElementById('reservoir-gpl-result').innerText = "Vă rugăm să introduceți valori valide.";
+        return;
+    }
+    
+    const consumptionPer100Km = 8.7;
+    const litersUsed = (boardKm * consumptionPer100Km) / 100;
+    const litersToFill = 32 - litersUsed;
+    const costToFill = litersToFill * gplPrice;
+    
+    document.getElementById('reservoir-gpl-result').innerText = `Pentru a umple rezervorul, turnați ${litersToFill.toFixed(2)} litri de GPL în sumă de ${costToFill.toFixed(2)} lei.`;
 }
 
 // Handle touch events to allow scrolling in container
