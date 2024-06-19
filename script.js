@@ -1,9 +1,7 @@
 // Define function to play click sound
-const clickSound = new Audio('click.mp3'); // Preîncărcăm sunetul
-
 function playClickSound() {
-    clickSound.currentTime = 0; // Resetează timpul de redare pentru a permite redarea repetată rapidă
-    clickSound.play(); // Redă sunetul
+    const audio = new Audio('click.mp3'); // Creează un nou obiect Audio cu sunetul dorit
+    audio.play(); // Redă sunetul
 }
 
 // Define function for GPL calculation
@@ -17,7 +15,7 @@ function calculateGPL() {
         return;
     }
     
-    const consumptionPer100Km = 8.7;
+    const consumptionPer100Km = 10;
     const cost = (price * distance * consumptionPer100Km) / 100;
     document.getElementById('gpl-result').innerText = `Călătoria va costa ${cost.toFixed(2)} lei.`;
 }
