@@ -14,7 +14,7 @@
             <div class="calculators">
                 <div class="calculator">
                     <h2>Calcul Călătorie GPL</h2>
-                    <label for="gpl-price">Introduceți care este prețul unui litru de GPL pentru ziua de astăzi:</label>
+                    <label for="gpl-price">Introduceți prețul unui litru de GPL:</label>
                     <input type="number" id="gpl-price" placeholder="Ex: 13.84" step="0.01">
                     <label for="gpl-distance">Câți kilometri intenționați să călătoriți:</label>
                     <input type="number" id="gpl-distance" placeholder="Ex: 50">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="calculator">
                     <h2>Calcul Călătorie Benzină</h2>
-                    <label for="benzin-price">Introduceți care este prețul unui litru de benzină pentru ziua de astăzi:</label>
+                    <label for="benzin-price">Introduceți prețul unui litru de benzină:</label>
                     <input type="number" id="benzin-price" placeholder="Ex: 25.00" step="0.01">
                     <label for="benzin-distance">Câți kilometri intenționați să călătoriți:</label>
                     <input type="number" id="benzin-distance" placeholder="Ex: 50">
@@ -48,12 +48,12 @@
                 </div>
                 <div class="calculator">
                     <h2>Rezervor GPL</h2>
-                    <label for="board-km">Kilometri la bord:</label>
-                    <input type="number" id="board-km" placeholder="Ex: 120">
-                    <label for="gpl-price-reservoir">Costul unui litru de GPL:</label>
-                    <input type="number" id="gpl-price-reservoir" placeholder="Ex: 13.84" step="0.01">
-                    <button onclick="calculateReservoirGPL()">CALCULEAZĂ</button>
-                    <div id="reservoir-gpl-result"></div>
+                    <label for="km-driven">Kilometri la bord:</label>
+                    <input type="number" id="km-driven" placeholder="Ex: 300">
+                    <label for="price-per-liter">Costul unui litru de GPL:</label>
+                    <input type="number" id="price-per-liter" placeholder="Ex: 13.84" step="0.01">
+                    <button onclick="calculateGPLReservoir()">CALCULEAZĂ</button>
+                    <div id="reservoir-result"></div>
                 </div>
             </div>
         </div>
