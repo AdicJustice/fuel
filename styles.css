@@ -1,3 +1,5 @@
+/* styles.css */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -40,12 +42,14 @@ body, html {
     overflow-y: auto;
     max-height: 100vh;
     transition: transform 0.2s ease-out;
+    padding-bottom: 50px; /* Adăugăm un padding mai mare pentru separare de marginea inferioară */
 }
 
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 2em; /* Reducem dimensiunea fontului h1 cu 30% */
 }
 
 .calculators {
@@ -63,12 +67,17 @@ h1 {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     width: 250px;
     text-align: left;
+    height: 75%; /* Reducem înălțimea cu aproximativ 25% */
+    max-height: 300px; /* Limităm maxim înălțimea pentru a asigura vizibilitatea conținutului */
+    overflow-y: auto; /* Adăugăm scrollbar vertical dacă este necesar */
+    margin-bottom: 30px; /* Margin mai mare între compartimente */
 }
 
 h2 {
     margin-bottom: 10px;
     color: #333;
     font-size: 1.2em;
+    font-size: 0.9em; /* Reducem dimensiunea fontului h2 cu 30% */
 }
 
 label {
@@ -76,6 +85,7 @@ label {
     margin: 8px 0 5px;
     font-size: 1em;
     color: #333;
+    font-size: 0.7em; /* Reducem dimensiunea fontului label cu 30% */
 }
 
 input {
@@ -86,6 +96,7 @@ input {
     border-radius: 5px;
     font-size: 1em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.8em; /* Reducem dimensiunea fontului input cu 30% */
 }
 
 button {
@@ -98,6 +109,7 @@ button {
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
     width: 100%;
+    font-size: 0.9em; /* Reducem dimensiunea fontului button cu 30% */
 }
 
 button:hover {
@@ -108,11 +120,12 @@ button:active {
     transform: scale(0.95);
 }
 
-#result, #gpl-result, #benzin-result, #taxi-result, #consumption-result {
+#result, #gpl-result, #benzin-result, #taxi-result, #consumption-result, #reservoir-gpl-result {
     margin-top: 15px;
     font-size: 1.2em;
     color: #333;
     font-weight: bold;
+    font-size: 0.9em; /* Reducem dimensiunea fontului result cu 30% */
 }
 
 @media (max-width: 768px) {
@@ -131,5 +144,25 @@ button:active {
 
     h1 {
         font-size: 2em;
+    }
+
+    h2 {
+        font-size: 0.8em; /* Reducem dimensiunea fontului h2 cu 30% pentru media query */
+    }
+
+    label {
+        font-size: 0.6em; /* Reducem dimensiunea fontului label cu 30% pentru media query */
+    }
+
+    input {
+        font-size: 0.7em; /* Reducem dimensiunea fontului input cu 30% pentru media query */
+    }
+
+    button {
+        font-size: 0.8em; /* Reducem dimensiunea fontului button cu 30% pentru media query */
+    }
+
+    #result, #gpl-result, #benzin-result, #taxi-result, #consumption-result, #reservoir-gpl-result {
+        font-size: 0.8em; /* Reducem dimensiunea fontului result cu 30% pentru media query */
     }
 }
