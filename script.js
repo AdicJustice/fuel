@@ -15,7 +15,7 @@ function calculateGPL() {
         return;
     }
     
-    const consumptionPer100Km = 8.7;
+    const consumptionPer100Km = 8,7;
     const cost = (price * distance * consumptionPer100Km) / 100;
     document.getElementById('gpl-result').innerText = `Călătoria va costa ${cost.toFixed(2)} lei.`;
 }
